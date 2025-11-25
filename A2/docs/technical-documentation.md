@@ -1,87 +1,133 @@
+
 # 🧱 Technical Documentation
 
 ## 🧩 Project Overview
-This project is a React-based portfolio website designed to demonstrate my web development skills.  
-It includes multiple sections (Hero, About, Skills, Services, Projects, and Contact) with dynamic content, animations, and responsive layouts.
+This project is an interactive portfolio website built with **React** and **Vite**.  
+It includes multiple sections: Hero, About, Skills, Services, Projects, GitHub API Integration, and Contact.
+
+The website demonstrates:
+- Component-based architecture  
+- API integration  
+- Input validation  
+- State management  
+- Responsive and accessible design  
 
 ---
 
 ## ⚙️ Architecture & Component Structure
 src/
 ├── components/
-│ ├── Header.jsx # Navigation bar and links
-│ ├── Footer.jsx # Footer section
-│ ├── ContactForm.jsx # Contact form with validation
-│ ├── ProjectsGrid.jsx # Displays projects dynamically
-│ ├── ServicesCarousel.jsx # Scrollable carousel for services
-│ └── icons/GitHubIcon.jsx # Custom GitHub icon
+│ ├── Header.jsx # Navigation bar (desktop + mobile)
+│ ├── Footer.jsx # Footer with branding and links
+│ ├── Social.jsx # Reusable social icon link
+│ ├── ContactForm.jsx # Validated contact form with error handling
+│ ├── ProjectsGrid.jsx # Displays portfolio projects
+│ ├── ServicesCarousel.jsx # Scrollable services carousel with swipe support
+│ ├── GithubRepos.jsx # Fetches and displays latest GitHub repositories (API)
+│ └── icons/GitHubIcon.jsx # Custom GitHub SVG icon
+│
 ├── data/
-│ ├── projects.js # Project data objects
-│ └── services.js # Service data objects
+│ ├── projects.js # Local project list
+│ └── services.js # Local services list
+│
 ├── assets/ # Images and media
 ├── App.jsx # Main layout and section composition
-├── App.css # Styling and layout configuration
-└── main.jsx # React DOM entry point
+├── App.css # Global styles and theme variables
+└── main.jsx # App entry point
 
 
 
 ---
 
-## 🧠 React Hooks Used
-| Hook | Purpose |
-|------|----------|
-| **useState** | Manage form inputs and carousel state. |
-| **useEffect** | Handle scroll-based effects and cleanup. |
-| **useRef** | Reference DOM elements for touch/swipe detection. |
-| **useMemo** | Store static data (services, projects) efficiently. |
+## 🌐 API Integration (GitHub REST API)
+This project integrates with the **GitHub API** to load and display the latest repositories.
 
----
+### Endpoint Used
+https://api.github.com/users/<username>/repos?sort=updated&per_page=6
 
-## 🧩 Data Handling
-- **Form Input Validation:** Ensures full name, email, and message are not empty.
-- **Local State Management:** Used to display errors and success messages.
-- **No External API:** The form currently logs submission data to the console (for demonstration).
 
----
+### Why No API Token?
+- GitHub allows **60 unauthenticated requests per hour** for this endpoint.
+- Storing tokens in frontend code is unsafe.
+- Therefore, the project uses **public, no-auth API calls**, which meet assignment requirements.
 
-## 🎨 Styling & Responsiveness
-- **CSS Variables** for color themes and shadows.
-- **Glassmorphism Design:** Soft transparent cards and buttons.
-- **Flexbox & Grid Layouts** for adaptive sections.
-- **Hover & Transition Effects** for user engagement.
+### Error Handling
+If GitHub is unavailable or the username is wrong:
+- A friendly message appears:  
+  **"Could not load GitHub repositories. Please try again later."**
 
----
+  ---
 
-## ⚡ Animations
-- Button hover brightness and shadow effects.
-- Smooth transitions on section scroll and card hover.
-- Pulse effect on scroll indicator.
+  ## 🧠 React Hooks Used
 
----
+  | Hook | Purpose |
+  |------|----------|
+  | **useState** | Manage form inputs, carousel index, API data, menu toggles, and errors. |
+  | **useEffect** | Fetch GitHub repos, handle scroll effects, and lifecycle behaviors. |
+  | **useRef** | Track touch positions for swipe gestures in the carousel. |
+  | **useMemo** | Cache static project/service data and avoid unnecessary rerenders. |
 
-## 🧰 Development Tools
-- **Vite** for fast React setup.
-- **NPM** for package management.
-- **GitHub** for version control and documentation.
-- **VS Code** as the development environment.
+  ---
 
----
+  ## 🧩 Data Handling
 
-## 🧪 Error Handling & Feedback
-- Inline validation errors for each input field.
-- Visual cues and messages for successful submission.
-- Console logging used as mock data handling for now.
+  ### 1. Contact Form Validation
+  - Ensures **full name**, **email**, and **message** are not empty.
+  - Email is validated using a regex pattern.
+  - Inline error messages appear dynamically.
+  - Successful submission displays a success message.
 
----
+  ### 2. API Data (GitHub Repos)
+  - Fetched once on component mount.
+  - Stored in local state.
+  - Renders repository name, description, star count, and link.
 
-## 🚀 Future Improvements
-- Integrate **EmailJS** or **Firebase** to send real messages from the contact form.
-- Add **dark/light mode toggle** with localStorage.
-- Implement **Framer Motion** for section animations.
-- Expand project filtering and search functionality.
+  ---
 
----
+  ## 🎨 Styling & Responsiveness
+  - **Glassmorphism Theme** using custom CSS variables.
+  - Layout built with **Flexbox** and **CSS Grid**.
+  - Fully responsive across all screen sizes.
+  - Subtle animations: hover effects, scroll indicator, card transitions.
 
-## 🧠 Summary
-This portfolio demonstrates clean structure, reusable components, and interactive user experience.  
-It reflects modern best practices in React development with readable code, scalable design, and ethical AI assistance.
+  ---
+
+  ## ⚡ Carousel & Interaction Logic
+  The `ServicesCarousel` includes:
+  - Index-based navigation
+  - Prev/Next buttons
+  - Swipe gesture support via `touchstart`, `touchmove`, `touchend`
+  - Bounds-clamping logic to prevent invalid slide positions
+
+  ---
+
+  ## 🧪 Error Handling & User Feedback
+  - Form shows clear errors when invalid.
+  - GitHub API requests show fallback messages.
+  - All asynchronous operations include try/catch blocks.
+
+  ---
+
+  ## 🧰 Development Tools
+  - **React 19** + **Vite**
+  - **Node.js** + **NPM**
+  - **GitHub** for version control
+  - **VS Code**
+  - **ChatGPT** for debugging and documentation support
+
+  ---
+
+  ## 🚀 Performance Improvements
+  - Optimized images to reduce load time.
+  - Used `useMemo` to prevent unnecessary rerenders.
+  - Removed unused assets and code.
+  - Verified performance in Chrome Lighthouse.
+
+  ---
+
+  ## 🧠 Summary
+  This portfolio demonstrates strong React knowledge, reusable component design, real API integration, validated forms, and responsive UI.  
+  The structure is maintainable, scalable, and aligned with modern web development standards.
+
+  It showcases both technical ability and thoughtful UI/UX design.
+

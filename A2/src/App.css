@@ -329,4 +329,59 @@ header.nav .links a:hover { color: var(--c-text); background: rgba(255,255,255,0
 /* Motion preference */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
+
 }
+
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+@media (max-width: 960px) {
+  .github-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .github-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.github-card {
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.github-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.github-card h3 a {
+  color: var(--c-text);
+  text-decoration: none;
+}
+
+.github-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.github-desc {
+  margin: 0;
+  color: var(--c-muted);
+}
+
+.github-meta {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--c-muted);
+}
+

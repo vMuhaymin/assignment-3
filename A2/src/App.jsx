@@ -10,6 +10,7 @@ import GitHubIcon from "./components/icons/GitHubIcon";
 import ServicesCarousel from "./components/ServicesCarousel";
 import ProjectsGrid from "./components/ProjectsGrid";
 import ContactForm from "./components/ContactForm"; 
+import GithubRepos from "./components/GithubRepos"; 
 
 import { services as servicesData } from "./data/services";
 import { projects as projectsData } from "./data/projects";
@@ -31,7 +32,7 @@ export default function App() {
       <section id="hero" className="section hero">
         <div className="hero-inner container">
           <div className="hero-copy">
-            <div className="eyebrow glass">hello, this is Abdulmuhaymin</div>
+            <div className="eyebrow glass"> <h3>hello, this is Abdulmuhaymin</h3> </div>
             <h1 className="title-gradient">A Creative Developer</h1>
             <p className="sub">
               Junior Student at KFUPM. Passionate about <span>programming</span> and always eager to learn new things.
@@ -108,6 +109,9 @@ export default function App() {
 
       {/* Projects */}
       <ProjectsGrid projects={projects} />
+
+    
+      <GithubRepos />
 
       {/* Contact — replaced button with form */}
       <section id="contact" className="section contact">

@@ -1,58 +1,65 @@
 # 🤖 AI Usage Report
 
 ## 🧰 Tools Used
-- **ChatGPT (OpenAI)** – Used as the main AI assistant for coding support, debugging, and documentation help.  
-
+- **ChatGPT (OpenAI)** – Primary AI assistant used throughout the development of Assignment 2 for debugging, code improvement, API integration help, and documentation.
+- **GitHub Copilot (optional)** – Occasionally used for small auto-completions inside VS Code.
 
 ---
 
 ## 💡 Use Cases
 | Category | Description |
 |-----------|-------------|
-| **Exploring React Hooks** | AI helped me understand and apply React hooks like `useMemo`, `useEffect`, `useRef`, and `useState` more efficiently. |
-| **Debugging** | ChatGPT assisted in identifying and resolving issues related to carousel swiping, form validation, and component rendering. |
-| **Code Structuring** | With AI guidance, I refactored my initial single-file setup into modular components (`Header`, `Footer`) for cleaner architecture. |
-| **Styling Guidance** | AI helped refine the CSS design, including implementing a modern glassmorphism style and adjusting responsive layouts. |
-| **Documentation Support** | AI provided structure and clarity for the `README.md`, `technical-documentation.md`, and this report. |
+| **React Hooks & Component Logic** | AI helped me understand and apply hooks like `useState`, `useEffect`, `useRef`, and `useMemo` correctly. |
+| **Debugging Errors** | ChatGPT assisted with issues in the Services Carousel, contact form validation, and GitHub API integration. |
+| **API Integration** | AI guided me through safely integrating the GitHub REST API, error-handling patterns, and correct fetch usage inside React. |
+| **Code Refactoring** | My original code was large and unorganized—AI helped restructure it into reusable components (Header, Footer, ProjectsGrid, etc.). |
+| **Performance Tips** | AI suggested optimizations such as memoizing static data and avoiding inline heavy computations. |
+| **Documentation** | AI assisted in organizing and polishing the README, technical documentation, and this usage report. |
 
 ---
 
 ## 🚀 Benefits of AI Assistance
-- Accelerated learning and understanding of advanced React concepts.  
-- Faster identification and resolution of logical or syntax errors.  
-- Cleaner, modular, and more maintainable project structure.  
-- Better documentation quality and consistency throughout the repo.  
-- Enhanced code readability and adherence to modern web standards.
+- Faster debugging and issue resolution.  
+- Improved understanding of React logic flow and component structure.  
+- Cleaner, more modular, and maintainable code.  
+- Higher-quality documentation.  
+- Better error-handling and safer API design patterns.
 
 ---
 
 ## ⚠️ Challenges Faced
-- Some AI-generated suggestions didn’t fit my existing project flow and required manual adjustments.  
-- Ensuring AI suggestions maintained project consistency without breaking functionality.  
-- Balancing between AI assistance and independent coding to maintain originality.
+- Some AI suggestions required modification to fit my project's architecture.  
+- Ensuring the GitHub API logic worked without exposing tokens in frontend code.  
+- Verifying all AI-generated snippets worked inside the React + Vite environment.
 
 ---
 
 ## 🧠 Learning Outcomes
-- Improved proficiency in using **React hooks** and **component-based design**.  
-- Gained experience in debugging with a systematic, AI-assisted approach.  
-- Enhanced ability to write **well-structured documentation** and project files.  
-- Developed a clearer understanding of **how to collaborate responsibly with AI tools**.
+- Strengthened my understanding of **React Hooks** and component lifecycle.  
+- Learned safe API integration practices (avoiding exposing secrets in .env).  
+- Improved debugging workflow with structured problem-solving.  
+- Gained experience writing professional documentation.
 
 ---
 
-## ✅ Ethical and Responsible Use
-All AI-generated outputs were **reviewed, modified, and understood** before inclusion in the project.  
-AI was used **as a learning and productivity tool**, not as a substitute for personal understanding or creativity.  
-Every piece of code was tested and adjusted manually to ensure functionality and authenticity.
+## ✅ Ethical & Responsible AI Use
+All AI-generated content was:
+- Reviewed and edited manually.
+- Understood before being added.
+- Adapted to meet project needs.
+- Not used as a replacement for my own work.
+
+This ensures academic integrity and genuine learning.
 
 ---
 
 ## 🏁 Summary
-AI support played a key role in **rebuilding and refining** this portfolio project.  
-It enabled me to explore **new React features**, enhance **code quality**, and produce a **cleaner, more maintainable project** aligned with modern web standards.
+AI tools meaningfully contributed to:
+- Improving code quality  
+- Fixing logic errors  
+- Enhancing the UI/UX  
+- Guiding API integration  
+- Creating professional documentation  
 
----
+AI was used responsibly as a **support tool** to improve productivity and learning—not as a substitute for personal understanding.
 
-✅ **File Purpose:**  
-This report documents how AI contributed to the development of the project and demonstrates ethical, educational, and transparent use of AI tools.
