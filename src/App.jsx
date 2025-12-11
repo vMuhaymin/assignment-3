@@ -9,7 +9,7 @@ import Social from "./components/Social";
 import GitHubIcon from "./components/icons/GitHubIcon";
 import ServicesCarousel from "./components/ServicesCarousel";
 import ProjectsGrid from "./components/ProjectsGrid";
-import ContactForm from "./components/ContactForm"; 
+import ContactForm from "./components/contactForm"; 
 import GithubRepos from "./components/GithubRepos"; 
 
 import { services as servicesData } from "./data/services";
