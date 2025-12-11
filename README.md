@@ -38,11 +38,11 @@ This updated version introduces interactive components, a validated contact form
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/yourusername/A2.git
+git clone https://github.com/vMuhaymin/assignment-4.git
 
 
 2️⃣ Navigate to the folder
-cd A2
+cd assignment-4
 
 3️⃣ Install dependencies
 npm install
