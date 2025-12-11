@@ -1,4 +1,4 @@
-// App.jsx — Dark Blue Themed Portfolio (React 19 + Vite)
+// App.jsx — Dark Blue Themed  sss
 import React, { useMemo } from "react";
 import myPhoto from "./assets/Me.jpg";
 import "./App.css";
